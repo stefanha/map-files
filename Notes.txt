@@ -1,0 +1,22 @@
+Current Application Status:
+Loads and converts (most WorldCraft 3.3) .MAP files into .CMF files correctly.
+
+TODO:
++ If passable geometry (ie. fog volumes, water, slime, etc.) is ever put into
+  worldspawn, then the brushes will have to sort their contents in order to get
+  CSG union to work correctly.  Otherwise an object inside water could disappear.
+  This is not an issue if water is a separate brush entity.
+
++ There are still bugs if very complicated or degenerate geometry is passed
+  to the program.  These problems could occur when you create many pseudo
+  curved surfaces from arches (with many segments).  These bugs are due to
+  floating point precision problems and can be fixed by tweaking the
+  epsilon values appropriately.  Seriously degenerate geometry (which can be
+  detected using WorldCraft's "Map | Check for Problems" command) will still
+  not compile correctly.  This can be avoided by selecting "Fix" when
+  WorldCraft detects degenerate geometry. 
+
++ The possiblity of memory leaks also exists, although during debug builds,
+  Visual C++ is "supposed" to warn if there are memory leaks.  If a serious
+  error occurs, they will probably be memory leaks (which doesn't really matter
+  since Windows will free up any memory that a process has forgotten to free).

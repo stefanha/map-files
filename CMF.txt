@@ -1,0 +1,45 @@
+Compiled Map Format
+-------------------
+
+Author:		Stefan Hajnoczi
+Version:	2
+Date:		26 May '01
+
+
+Header:
+	3 char		CMF ID ("CMF")
+	1 char		Version byte
+	1 uint		Number of WAD files
+	1 uint		Number of entities
+	1 uint		Number of textures
+	x char		WAD filenames (zero terminated)
+	x char		Texture names (zero terminated)
+	x Entity	Entities
+
+Entity:
+	x char		Entity class (zero terminated)
+	1 uint		Number of properties
+	x Property	Entities properties
+	1 uint		Number of polygons
+	x Polygon	Polygons
+
+Property:
+	x char		Property name (zero terminated)
+	x char		Property value (zero terminated)
+
+Polygon:
+	1 uint		Texture ID
+	1 Plane		Polygon plane
+	1 uint		Number of vertices
+	x Vertex	Vertices
+
+Vertex:
+	1 Vector3	Coordinate
+	2 double	u and v texture coords
+
+Vector3:
+	3 double	x, y, and z component
+
+Plane:
+	1 Vector3	Normal
+	1 double	D

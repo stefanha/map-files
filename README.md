@@ -1,7 +1,7 @@
 ".MAP Files" Article and Source Code
 ====================================
-by Stefan Hajnoczi
-http://vmsplice.net/
+by Stefan Hajnoczi  
+http://vmsplice.net/  
 stefanha@gmail.com
 
 Licensed under the MIT License, see LICENSE file for details.
@@ -33,9 +33,9 @@ free to ask me at stefanha@gmail.com.
 
 Enjoy
 
-Files:
-MAPFiles.pdf	- The article
-csg.dsw		- The Visual C++ project for csg.exe
-*.cpp, *.h	- C++ source code to csg.exe
-csg.exe		- Parses .MAP files to .CMF files
+Files:  
+MAPFiles.pdf	- The article  
+csg.dsw		- The Visual C++ project for csg.exe  
+*.cpp, *.h	- C++ source code to csg.exe  
+csg.exe		- Parses .MAP files to .CMF files  
 CMFView.exe	- A .CMF file viewer
